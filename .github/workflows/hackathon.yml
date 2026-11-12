@@ -88,13 +88,13 @@ jobs:
         run: docker ps
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
         with:
           fetch-depth: 0
           submodules: true
 
       - name: Set up Python ${{ env.min-python-version }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: ${{ env.min-python-version }}
 
@@ -107,7 +107,7 @@ jobs:
           curl -sSL https://install.python-poetry.org | python -
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
           node-version: v18.15
 
